@@ -118,6 +118,8 @@ svg.i { inline-size: 1.05em; block-size: 1.05em; flex: none; stroke: currentColo
 .panel { background: var(--surface); border-right: 1px solid var(--rule); display: flex; flex-direction: column; min-block-size: 0; min-inline-size: 0; overflow-y: auto; }
 .pad { padding: 1.1rem 1.25rem; padding-left: max(1.25rem, env(safe-area-inset-left, 0px)); }
 .intro { display: grid; gap: .9rem; border-bottom: 1px solid var(--rule); }
+.made-by { justify-self: start; font-size: .78rem; color: var(--pine); background: var(--pine-soft); border-radius: 999px; padding: .2rem .7rem; text-decoration: none; }
+.made-by:hover { text-decoration: underline; text-underline-offset: 3px; }
 .kicker { font-size: .75rem; color: var(--ink-3); letter-spacing: .06em; text-transform: uppercase; }
 .intro h1 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: clamp(1.45rem, 1.1rem + 1vw, 1.8rem); line-height: 1.15; text-wrap: balance; }
 .facts-row { display: flex; flex-wrap: wrap; gap: .35rem .9rem; font-size: .8rem; color: var(--ink-2); }
@@ -387,7 +389,7 @@ input[type="range"]:focus-visible { outline: 2px solid var(--pine); outline-offs
   <div class="layout">
     <aside class="panel" aria-label="Подбор участка">
       <section class="pad intro">
-        <div class="kicker">Генплан · демо-данные</div>
+        <a class="made-by" href="https://davidenkomv4-lab.github.io/poselok-genplan/services.html" target="_blank" rel="noopener">Демо · Хотите такой генплан для своего посёлка? →</a>
         <h1>Участки на берегу Озернинского водохранилища</h1>
         <div class="facts-row">
           <span><svg class="i"><use href="#i-road"/></svg>Рузский округ, ~95 км от МКАД</span>
