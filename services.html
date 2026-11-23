@@ -101,6 +101,24 @@ section + section { border-top: 1px solid var(--rule); }
 .sec-head { display: grid; gap: .6rem; max-inline-size: 44rem; margin-block-end: 2rem; }
 .sec-head h2 { font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.3rem); }
 
+/* Studio partnership */
+.studio-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+  padding: clamp(1.15rem, 3vw, 2.4rem);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  background: var(--surface-2);
+}
+.studio-card .sec-head { margin-block-end: 0; }
+.studio-card .btn { justify-self: start; margin-block-start: .5rem; }
+.studio-list { display: grid; gap: .8rem; margin: 0; padding: 0; list-style: none; }
+.studio-list li { display: grid; grid-template-columns: 1.2rem minmax(0, 1fr); gap: .6rem; }
+.studio-list .i { color: var(--pine); margin-block-start: .15rem; }
+.studio-brief { margin-block: .9rem 0; color: var(--ink-2); }
+
 /* compare */
 .compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .compare > div { border-radius: 16px; padding: 1.4rem; display: grid; gap: .8rem; align-content: start; }
@@ -196,6 +214,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
     </a>
     <nav aria-label="Разделы">
       <a href="#how">Как работает</a>
+      <a href="#studios">Для студий</a>
       <a href="#prices">Цены</a>
       <a href="#faq">Вопросы</a>
     </nav>
@@ -283,6 +302,27 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         <li><h3>Показываю и правлю</h3><p>Присылаю ссылку на готовую карту, вношу ваши правки.</p><span class="when">дни 5–6</span></li>
         <li><h3>Запускаем</h3><p>Встраиваем на сайт, подключаем таблицу статусов и заявки в Telegram.</p><span class="when">день 7</span></li>
       </ol>
+    </div>
+  </section>
+
+  <section id="studios" aria-labelledby="studios-title">
+    <div class="wrap">
+      <div class="studio-card">
+        <div class="sec-head">
+          <div class="kicker">Для веб-студий</div>
+          <h2 id="studios-title">Генплан на субподряде</h2>
+          <p class="lead">Вы ведёте проект и общаетесь с заказчиком. Я беру на себя карту участков: от схемы застройщика до модуля для вашего сайта.</p>
+          <a class="btn" href="https://t.me/makste1egram" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg>Обсудить субподряд</a>
+        </div>
+        <div>
+          <ul class="studio-list">
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Подготовлю данные.</strong> Оцифрую контуры из схемы заказчика и свяжу участки с таблицей цен и статусов.</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Соберу карту в стиле вашего сайта.</strong> Добавлю фильтры, карточки участков и ссылки на выбранные лоты.</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Передам готовый модуль.</strong> Помогу встроить карту и покажу, как обновлять данные.</span></li>
+          </ul>
+          <p class="studio-brief">Пришлите схему посёлка и скажите, на чём собираете сайт. По этим материалам оценю сроки и стоимость.</p>
+        </div>
+      </div>
     </div>
   </section>
 
